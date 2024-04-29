@@ -1,0 +1,121 @@
+{
+  "@context" : {
+    "DomesticFlight" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#DomesticFlight"
+    },
+    "Aerodrome" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aerodrome"
+    },
+    "Entertainment" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Entertainment"
+    },
+    "InFlightMeal" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#InFlightMeal"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "InternationalFlight" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#InternationalFlight"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Airport" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airport"
+    },
+    "InternationalAirport" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#InternationalAirport"
+    },
+    "LightAircraft" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#LightAircraft"
+    },
+    "Person" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Person"
+    },
+    "RegionalAirline" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#RegionalAirline"
+    },
+    "CargoAirline" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#CargoAirline"
+    },
+    "IATA" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#IATA",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Pilot" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Pilot"
+    },
+    "IntercontinentalFlight" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#IntercontinentalFlight"
+    },
+    "FlightAttendant" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#FlightAttendant"
+    },
+    "Passenger" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Passenger"
+    },
+    "Rating" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Rating"
+    },
+    "WiFiService" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#WiFiService"
+    },
+    "Duration" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Duration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Aircraft" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"
+    },
+    "Capacity" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Capacity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "MajorAirline" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#MajorAirline"
+    },
+    "AirportFlights" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AirportFlights",
+      "@type" : "@id"
+    },
+    "MediumAircraft" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#MediumAircraft"
+    },
+    "Airline" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airline"
+    },
+    "TypeFlight" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#TypeFlight"
+    },
+    "HeavyAircraft" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#HeavyAircraft"
+    },
+    "DomesticAirport" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#DomesticAirport"
+    },
+    "AirportCapability" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AirportCapability",
+      "@type" : "@id"
+    },
+    "CrewMember" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#CrewMember"
+    },
+    "AircraftCapacity" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AircraftCapacity",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Service" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Service"
+    },
+    "LowCostAirline" : {
+      "@id" : "http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#LowCostAirline"
+    }
+  }
+}
