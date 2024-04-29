@@ -1,0 +1,688 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02/"
+     xml:base="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:AirlinesComparison_IRS_PEC02="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02">
+        <rdfs:comment>Con esta ontología se pretende formalizar el conocimiento al respecto de los datos de satisfacción obtenidos en los ficheros .csv al respecto de los clientes de Ryanair y Qatar Airways, de este modo mejorar la interoperabilidad, poder favorecer el razonamiento automático, posterior para una creación de un futuro sistemas inteligentes.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AircraftCapacity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AircraftCapacity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AircraftCapacity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AircraftCapacity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AirportCapability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AirportCapability">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airline"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airline"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airport"/>
+        <rdfs:comment>Define los tipos de aeronave que pueden aterrizar en una eropuerto.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AirportFlights -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AirportFlights">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Capacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Capacity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AircraftCapacity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Capacity"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Capacidad en asientos de un avión</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Duration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Duration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#TypeFlight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Duración, de un tipo de vuelo específico</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#IATA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#IATA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Código de letras internacional que define un aeropuerto</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aerodrome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aerodrome">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airport"/>
+        <rdfs:comment>Aeropuerto nacional que solo acepta aeronaves de tipo ligero o helicópteros</rdfs:comment>
+        <rdfs:label>Aerodrome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AirportCapability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AirportFlights"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AirportFlights"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airport"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AirportCapability"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AirportFlights"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AirportCapability"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">100</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AirportFlights"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">200</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Tipo de avión (Ryanauir solo tiene un modelo, pero este campo es útil para otras comprobaciones.)</rdfs:comment>
+        <rdfs:label>Aircraft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airline">
+        <rdfs:comment>Represena la aerolínea de estudio</rdfs:comment>
+        <rdfs:label>Airline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airport">
+        <rdfs:comment>Aeropuertos implicados en origen y destino</rdfs:comment>
+        <rdfs:label>Airport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#CargoAirline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#CargoAirline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airline"/>
+        <rdfs:comment>Aerolínea que opera vuelos de carga</rdfs:comment>
+        <rdfs:label>CargoAirline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#CrewMember -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#CrewMember">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Person"/>
+        <rdfs:comment>Persona a bordo distinto a un piloto y un tripulante de cabina. Puede ser un ingeniero, un mecánico o staff de la aerolínea</rdfs:comment>
+        <rdfs:label>Staff</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#DomesticAirport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#DomesticAirport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airport"/>
+        <rdfs:comment>Aeropuerto con tráfico sono interno de un país</rdfs:comment>
+        <rdfs:label>DomesticAirport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#DomesticFlight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#DomesticFlight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#TypeFlight"/>
+        <rdfs:comment>Vuelo nacional</rdfs:comment>
+        <rdfs:label>DomesticFlight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Entertainment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Entertainment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Service"/>
+        <rdfs:comment>Tipos de entretenimiento a bordo</rdfs:comment>
+        <rdfs:label>Entertainment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#FlightAttendant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#FlightAttendant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Person"/>
+        <rdfs:comment>Tripulante de cabina de pasajeros</rdfs:comment>
+        <rdfs:label>CabinCrew</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#HeavyAircraft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#HeavyAircraft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+        <rdfs:comment>Avion de más de 100 toneladas de peso, independientemente de los pasajeros que pueda llevar</rdfs:comment>
+        <rdfs:label>HeavyAircraft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#InFlightMeal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#InFlightMeal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Service"/>
+        <rdfs:comment>Tipos de comida en vuelo</rdfs:comment>
+        <rdfs:label>InFlightMeal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#IntercontinentalFlight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#IntercontinentalFlight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#TypeFlight"/>
+        <rdfs:comment>Tipo de vuelo entre paises pero que implica tambíen varios continentes. Normalmente vuelos de largo radio fuera de espacio Europeo</rdfs:comment>
+        <rdfs:label>IntercontinentalFlight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#InternationalAirport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#InternationalAirport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airport"/>
+        <rdfs:comment>Aeropuerto con tráfico internacional</rdfs:comment>
+        <rdfs:label>InternationalAirport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#InternationalFlight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#InternationalFlight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#TypeFlight"/>
+        <rdfs:comment>Tipo de vuelo entre paises</rdfs:comment>
+        <rdfs:label>InternationalFlight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#LightAircraft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#LightAircraft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+        <rdfs:comment>Aviones ligeros, de menos de 19 pax y menos de 17 toneladas</rdfs:comment>
+        <rdfs:label>LightAircraft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#LowCostAirline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#LowCostAirline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airline"/>
+        <rdfs:comment>Es una aerolínea que opera aviones normalmente medianos y realiza vuelos de corto y medio radio de punto a punto. Sin estructura de red.</rdfs:comment>
+        <rdfs:label>LowCostAirline</rdfs:label>
+        <rdfs:sameAs rdf:resource="https://dbpedia.org/page/Ryanair"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#MajorAirline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#MajorAirline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airline"/>
+        <rdfs:comment>Es una aerolínea que tiene todo tipo de aeronaves y realiza vuelos de todo tipo. Suelen ser las aerolíneas principales.</rdfs:comment>
+        <rdfs:label>MajorAirline</rdfs:label>
+        <rdfs:sameAs rdf:resource="https://dbpedia.org/page/Qatar_Airways"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#MediumAircraft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#MediumAircraft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+        <rdfs:comment>Aviones de mas de 19 pasajeros y mas de 30 toneladas de peso pero menos de 100</rdfs:comment>
+        <rdfs:label>MediumAircraft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Passenger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Passenger">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Person"/>
+        <rdfs:comment>Persona de tipo pasajero</rdfs:comment>
+        <rdfs:label>Passenger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Person">
+        <rdfs:comment>Individuos de todo tipo implicados en la ontología</rdfs:comment>
+        <rdfs:label>Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Pilot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Pilot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Person"/>
+        <rdfs:comment>Pilotos de aerolíneas</rdfs:comment>
+        <rdfs:label>Pilot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Rating">
+        <rdfs:comment>Clasificación de todo tipo implicada.</rdfs:comment>
+        <rdfs:label>Rating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#RegionalAirline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#RegionalAirline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airline"/>
+        <rdfs:comment>Aerolínea que solo opera vuelos regionales, esto implica aviones pequeños y rutas cortas, normalmente entre aeropuertos secundarios</rdfs:comment>
+        <rdfs:label>RegionalAirline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Service">
+        <rdfs:comment>Servicios ofrecidos durante el vuelo.</rdfs:comment>
+        <rdfs:label>Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#TypeFlight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#TypeFlight">
+        <rdfs:comment>Tipo de vuelo que realiza la aerolínea</rdfs:comment>
+        <rdfs:label>TypeFlight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#WiFiService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#WiFiService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Service"/>
+        <rdfs:comment>Tipos de contenido de acceso wifi a bordo</rdfs:comment>
+        <rdfs:label>WiFiService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AirbusA320 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AirbusA320">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Qatar"/>
+        <AirlinesComparison_IRS_PEC02:Capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">180</AirlinesComparison_IRS_PEC02:Capacity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Qatar -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Qatar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AirbusA380 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#AirbusA380">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Qatar"/>
+        <AirlinesComparison_IRS_PEC02:Capacity>Business</AirlinesComparison_IRS_PEC02:Capacity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Qatar -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Qatar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#BCN -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#BCN">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airport"/>
+        <rdfs:comment>Barcelona</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Boeing737 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Boeing737">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Ryanair"/>
+        <AirlinesComparison_IRS_PEC02:Capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">180</AirlinesComparison_IRS_PEC02:Capacity>
+        <AirlinesComparison_IRS_PEC02:Capacity></AirlinesComparison_IRS_PEC02:Capacity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Ryanair -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Ryanair"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Boeing777 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Boeing777">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Aircraft"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Qatar"/>
+        <AirlinesComparison_IRS_PEC02:Capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">270</AirlinesComparison_IRS_PEC02:Capacity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Qatar -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Qatar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#DOH -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#DOH">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airport"/>
+        <rdfs:comment>Doha</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#MAD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#MAD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airport"/>
+        <rdfs:comment>Madrid</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Qatar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Qatar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airline"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#MajorAirline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Rojo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Rojo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Ryanair -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Ryanair">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airline"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#LowCostAirline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Sullenberg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Sullenberg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Person"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdfs:comment></rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#Qatar">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#Ryanair">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airline"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#Qatar"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#MajorAirline"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#Qatar"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#Airline"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#Ryanair"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02#LowCostAirline"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#Qatar"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
