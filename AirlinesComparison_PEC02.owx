@@ -1,0 +1,813 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02">
+    <Prefix name="" IRI="http://www.semanticweb.org/ignacio/ontologies/2024/3/AirlinesComparison_IRS_PEC02/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Con esta ontología se pretende formalizar el conocimiento al respecto de los datos de satisfacción obtenidos en los ficheros .csv al respecto de los clientes de Ryanair y Qatar Airways, de este modo mejorar la interoperabilidad, poder favorecer el razonamiento automático, posterior para una creación de un futuro sistemas inteligentes.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Aerodrome"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Aircraft"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Airline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Airport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CargoAirline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CrewMember"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DomesticAirport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DomesticFlight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entertainment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FlightAttendant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HeavyAircraft"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InFlightMeal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IntercontinentalFlight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InternationalAirport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InternationalFlight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LightAircraft"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LowCostAirline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MajorAirline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MediumAircraft"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Passenger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pilot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rating"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RegionalAirline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TypeFlight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WiFiService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#AircraftCapacity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#AirportCapability"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#AirportFlights"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Capacity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Duration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#IATA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AirbusA320"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AirbusA380"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BCN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Boeing737"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Boeing777"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DOH"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MAD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Qatar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rojo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ryanair"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sullenberg"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:sameAs"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Aircraft"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#AirportCapability"/>
+            <Class IRI="#Aircraft"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Aircraft"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#AirportFlights"/>
+            <Class IRI="#Aircraft"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Aircraft"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#AirportFlights"/>
+            <Class IRI="#Airport"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Aircraft"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#AirportCapability"/>
+            <Class IRI="#Aircraft"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Aircraft"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#AirportFlights"/>
+            <Class IRI="#Aircraft"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Aircraft"/>
+        <ObjectMaxCardinality cardinality="100">
+            <ObjectProperty IRI="#AirportCapability"/>
+            <Class IRI="#Aircraft"/>
+        </ObjectMaxCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Aircraft"/>
+        <ObjectMaxCardinality cardinality="200">
+            <ObjectProperty IRI="#AirportFlights"/>
+            <Class IRI="#Aircraft"/>
+        </ObjectMaxCardinality>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Aerodrome"/>
+        <Class IRI="#Airport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CargoAirline"/>
+        <Class IRI="#Airline"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CrewMember"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DomesticAirport"/>
+        <Class IRI="#Airport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DomesticFlight"/>
+        <Class IRI="#TypeFlight"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entertainment"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FlightAttendant"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HeavyAircraft"/>
+        <Class IRI="#Aircraft"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InFlightMeal"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IntercontinentalFlight"/>
+        <Class IRI="#TypeFlight"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InternationalAirport"/>
+        <Class IRI="#Airport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InternationalFlight"/>
+        <Class IRI="#TypeFlight"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LightAircraft"/>
+        <Class IRI="#Aircraft"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LowCostAirline"/>
+        <Class IRI="#Airline"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MajorAirline"/>
+        <Class IRI="#Airline"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MediumAircraft"/>
+        <Class IRI="#Aircraft"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Passenger"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pilot"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegionalAirline"/>
+        <Class IRI="#Airline"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WiFiService"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Aircraft"/>
+        <NamedIndividual IRI="#AirbusA320"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Aircraft"/>
+        <NamedIndividual IRI="#AirbusA380"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Airport"/>
+        <NamedIndividual IRI="#BCN"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Aircraft"/>
+        <NamedIndividual IRI="#Boeing737"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Aircraft"/>
+        <NamedIndividual IRI="#Boeing777"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Airport"/>
+        <NamedIndividual IRI="#DOH"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Airport"/>
+        <NamedIndividual IRI="#MAD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Airline"/>
+        <NamedIndividual IRI="#Qatar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MajorAirline"/>
+        <NamedIndividual IRI="#Qatar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#Rojo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Airline"/>
+        <NamedIndividual IRI="#Ryanair"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LowCostAirline"/>
+        <NamedIndividual IRI="#Ryanair"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#Sullenberg"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="#AirbusA320"/>
+        <NamedIndividual IRI="#Qatar"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#AirbusA380"/>
+        <NamedIndividual IRI="#Qatar"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Boeing737"/>
+        <NamedIndividual IRI="#Ryanair"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Boeing777"/>
+        <NamedIndividual IRI="#Qatar"/>
+    </SameIndividual>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Capacity"/>
+        <NamedIndividual IRI="#AirbusA320"/>
+        <Literal>180</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Capacity"/>
+        <NamedIndividual IRI="#AirbusA380"/>
+        <Literal>Business</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Capacity"/>
+        <NamedIndividual IRI="#Boeing737"/>
+        <Literal></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Capacity"/>
+        <NamedIndividual IRI="#Boeing737"/>
+        <Literal>180</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Capacity"/>
+        <NamedIndividual IRI="#Boeing777"/>
+        <Literal>270</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AircraftCapacity"/>
+        <Class IRI="#Aircraft"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AircraftCapacity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#AircraftCapacity"/>
+            <Class IRI="#Aircraft"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AirportCapability"/>
+        <Class IRI="#Airline"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AirportCapability"/>
+        <Class IRI="#Airport"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AirportFlights"/>
+        <Class IRI="#Airport"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AircraftCapacity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#AircraftCapacity"/>
+            <Class IRI="#Aircraft"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AirportCapability"/>
+        <Class IRI="#Airline"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AirportCapability"/>
+        <Class IRI="#Airport"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AirportFlights"/>
+        <Class IRI="#Airport"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Capacity"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Capacity"/>
+        <Class IRI="#Aircraft"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Capacity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#AircraftCapacity"/>
+            <Class IRI="#Aircraft"/>
+        </ObjectSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Capacity"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#Capacity"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMinCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Duration"/>
+        <Class IRI="#TypeFlight"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#IATA"/>
+        <Class IRI="#Airport"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Capacity"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Duration"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#IATA"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Airline"/>
+                <Variable IRI="urn:swrl:var#&apos;Qatar&apos;"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#MajorAirline"/>
+                <Variable IRI="urn:swrl:var#&apos;Qatar&apos;"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Airline"/>
+                <Variable IRI="urn:swrl:var#&apos;Ryanair&apos;"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#LowCostAirline"/>
+                <Variable IRI="urn:swrl:var#&apos;Ryanair&apos;"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Aerodrome</IRI>
+        <Literal>Aeropuerto nacional que solo acepta aeronaves de tipo ligero o helicópteros</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Aerodrome</IRI>
+        <Literal>Aerodrome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Aircraft</IRI>
+        <Literal>Tipo de avión (Ryanauir solo tiene un modelo, pero este campo es útil para otras comprobaciones.)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Aircraft</IRI>
+        <Literal>Aircraft</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Airline</IRI>
+        <Literal>Represena la aerolínea de estudio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Airline</IRI>
+        <Literal>Airline</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Airport</IRI>
+        <Literal>Aeropuertos implicados en origen y destino</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Airport</IRI>
+        <Literal>Airport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AirportCapability</IRI>
+        <Literal>Define los tipos de aeronave que pueden aterrizar en una eropuerto.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BCN</IRI>
+        <Literal>Barcelona</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Capacity</IRI>
+        <Literal>Capacidad en asientos de un avión</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CargoAirline</IRI>
+        <Literal>Aerolínea que opera vuelos de carga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CargoAirline</IRI>
+        <Literal>CargoAirline</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CrewMember</IRI>
+        <Literal>Persona a bordo distinto a un piloto y un tripulante de cabina. Puede ser un ingeniero, un mecánico o staff de la aerolínea</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CrewMember</IRI>
+        <Literal>Staff</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DOH</IRI>
+        <Literal>Doha</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DomesticAirport</IRI>
+        <Literal>Aeropuerto con tráfico sono interno de un país</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DomesticAirport</IRI>
+        <Literal>DomesticAirport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DomesticFlight</IRI>
+        <Literal>Vuelo nacional</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DomesticFlight</IRI>
+        <Literal>DomesticFlight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Duration</IRI>
+        <Literal>Duración, de un tipo de vuelo específico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Entertainment</IRI>
+        <Literal>Tipos de entretenimiento a bordo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Entertainment</IRI>
+        <Literal>Entertainment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FlightAttendant</IRI>
+        <Literal>Tripulante de cabina de pasajeros</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FlightAttendant</IRI>
+        <Literal>CabinCrew</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HeavyAircraft</IRI>
+        <Literal>Avion de más de 100 toneladas de peso, independientemente de los pasajeros que pueda llevar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HeavyAircraft</IRI>
+        <Literal>HeavyAircraft</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IATA</IRI>
+        <Literal>Código de letras internacional que define un aeropuerto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#InFlightMeal</IRI>
+        <Literal>Tipos de comida en vuelo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#InFlightMeal</IRI>
+        <Literal>InFlightMeal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IntercontinentalFlight</IRI>
+        <Literal>Tipo de vuelo entre paises pero que implica tambíen varios continentes. Normalmente vuelos de largo radio fuera de espacio Europeo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IntercontinentalFlight</IRI>
+        <Literal>IntercontinentalFlight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#InternationalAirport</IRI>
+        <Literal>Aeropuerto con tráfico internacional</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#InternationalAirport</IRI>
+        <Literal>InternationalAirport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#InternationalFlight</IRI>
+        <Literal>Tipo de vuelo entre paises</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#InternationalFlight</IRI>
+        <Literal>InternationalFlight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LightAircraft</IRI>
+        <Literal>Aviones ligeros, de menos de 19 pax y menos de 17 toneladas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LightAircraft</IRI>
+        <Literal>LightAircraft</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LowCostAirline</IRI>
+        <Literal>Es una aerolínea que opera aviones normalmente medianos y realiza vuelos de corto y medio radio de punto a punto. Sin estructura de red.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LowCostAirline</IRI>
+        <Literal>LowCostAirline</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:sameAs"/>
+        <IRI>#LowCostAirline</IRI>
+        <IRI>https://dbpedia.org/page/Ryanair</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MAD</IRI>
+        <Literal>Madrid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MajorAirline</IRI>
+        <Literal>Es una aerolínea que tiene todo tipo de aeronaves y realiza vuelos de todo tipo. Suelen ser las aerolíneas principales.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MajorAirline</IRI>
+        <Literal>MajorAirline</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:sameAs"/>
+        <IRI>#MajorAirline</IRI>
+        <IRI>https://dbpedia.org/page/Qatar_Airways</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MediumAircraft</IRI>
+        <Literal>Aviones de mas de 19 pasajeros y mas de 30 toneladas de peso pero menos de 100</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MediumAircraft</IRI>
+        <Literal>MediumAircraft</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Passenger</IRI>
+        <Literal>Persona de tipo pasajero</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Passenger</IRI>
+        <Literal>Passenger</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Person</IRI>
+        <Literal>Individuos de todo tipo implicados en la ontología</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Person</IRI>
+        <Literal>Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Pilot</IRI>
+        <Literal>Pilotos de aerolíneas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Pilot</IRI>
+        <Literal>Pilot</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Rating</IRI>
+        <Literal>Clasificación de todo tipo implicada.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Rating</IRI>
+        <Literal>Rating</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RegionalAirline</IRI>
+        <Literal>Aerolínea que solo opera vuelos regionales, esto implica aviones pequeños y rutas cortas, normalmente entre aeropuertos secundarios</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RegionalAirline</IRI>
+        <Literal>RegionalAirline</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Service</IRI>
+        <Literal>Servicios ofrecidos durante el vuelo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Service</IRI>
+        <Literal>Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TypeFlight</IRI>
+        <Literal>Tipo de vuelo que realiza la aerolínea</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TypeFlight</IRI>
+        <Literal>TypeFlight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WiFiService</IRI>
+        <Literal>Tipos de contenido de acceso wifi a bordo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WiFiService</IRI>
+        <Literal>WiFiService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AnonymousIndividual nodeID="_:genid2147483648"/>
+        <Literal></Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
