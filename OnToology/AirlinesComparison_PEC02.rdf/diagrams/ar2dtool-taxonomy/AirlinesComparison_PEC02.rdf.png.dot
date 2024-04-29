@@ -1,0 +1,26 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "AirlinesComparison_IRS_PEC02:InternationalAirport" "AirlinesComparison_IRS_PEC02:MediumAircraft" "AirlinesComparison_IRS_PEC02:Aircraft" "AirlinesComparison_IRS_PEC02:DomesticAirport" "AirlinesComparison_IRS_PEC02:Entertainment" "AirlinesComparison_IRS_PEC02:CargoAirline" "AirlinesComparison_IRS_PEC02:Service" "AirlinesComparison_IRS_PEC02:IntercontinentalFlight" "AirlinesComparison_IRS_PEC02:LightAircraft" "AirlinesComparison_IRS_PEC02:WiFiService" "AirlinesComparison_IRS_PEC02:TypeFlight" "AirlinesComparison_IRS_PEC02:LowCostAirline" "AirlinesComparison_IRS_PEC02:DomesticFlight" "AirlinesComparison_IRS_PEC02:MajorAirline" "AirlinesComparison_IRS_PEC02:Airline" "AirlinesComparison_IRS_PEC02:RegionalAirline" "AirlinesComparison_IRS_PEC02:InFlightMeal" "AirlinesComparison_IRS_PEC02:HeavyAircraft" "AirlinesComparison_IRS_PEC02:CrewMember" "AirlinesComparison_IRS_PEC02:FlightAttendant" "AirlinesComparison_IRS_PEC02:InternationalFlight" "AirlinesComparison_IRS_PEC02:Passenger" "AirlinesComparison_IRS_PEC02:Airport" "AirlinesComparison_IRS_PEC02:Person" "AirlinesComparison_IRS_PEC02:Aerodrome" "AirlinesComparison_IRS_PEC02:Pilot" ; /*classes style*/
+	"AirlinesComparison_IRS_PEC02:InternationalFlight" -> "AirlinesComparison_IRS_PEC02:TypeFlight" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:Pilot" -> "AirlinesComparison_IRS_PEC02:Person" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:LowCostAirline" -> "AirlinesComparison_IRS_PEC02:Airline" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:WiFiService" -> "AirlinesComparison_IRS_PEC02:Service" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:LightAircraft" -> "AirlinesComparison_IRS_PEC02:Aircraft" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:Entertainment" -> "AirlinesComparison_IRS_PEC02:Service" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:MediumAircraft" -> "AirlinesComparison_IRS_PEC02:Aircraft" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:RegionalAirline" -> "AirlinesComparison_IRS_PEC02:Airline" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:DomesticFlight" -> "AirlinesComparison_IRS_PEC02:TypeFlight" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:Passenger" -> "AirlinesComparison_IRS_PEC02:Person" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:MajorAirline" -> "AirlinesComparison_IRS_PEC02:Airline" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:Aerodrome" -> "AirlinesComparison_IRS_PEC02:Airport" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:FlightAttendant" -> "AirlinesComparison_IRS_PEC02:Person" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:IntercontinentalFlight" -> "AirlinesComparison_IRS_PEC02:TypeFlight" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:CargoAirline" -> "AirlinesComparison_IRS_PEC02:Airline" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:CrewMember" -> "AirlinesComparison_IRS_PEC02:Person" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:InternationalAirport" -> "AirlinesComparison_IRS_PEC02:Airport" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:HeavyAircraft" -> "AirlinesComparison_IRS_PEC02:Aircraft" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:DomesticAirport" -> "AirlinesComparison_IRS_PEC02:Airport" [ label = "rdfs:subClassOf" ];
+	"AirlinesComparison_IRS_PEC02:InFlightMeal" -> "AirlinesComparison_IRS_PEC02:Service" [ label = "rdfs:subClassOf" ];
+
+}
