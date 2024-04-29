@@ -1,0 +1,41 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "AirlinesComparison_IRS_PEC02:Aircraft" "AirlinesComparison_IRS_PEC02:TypeFlight" "AirlinesComparison_IRS_PEC02:LowCostAirline" "AirlinesComparison_IRS_PEC02:MajorAirline" "AirlinesComparison_IRS_PEC02:Airline" "AirlinesComparison_IRS_PEC02:Airport" ; /*classes style*/
+	"AirlinesComparison_IRS_PEC02:AirbusA320" -> "AirlinesComparison_IRS_PEC02:Qatar" [ label = "owl:sameAs" ];
+	"AirlinesComparison_IRS_PEC02:Capacity" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"AirlinesComparison_IRS_PEC02:Boeing737" -> "AirlinesComparison_IRS_PEC02:Ryanair" [ label = "owl:sameAs" ];
+	"AirlinesComparison_IRS_PEC02:AirbusA380" -> "AirlinesComparison_IRS_PEC02:Qatar" [ label = "owl:sameAs" ];
+	"AirlinesComparison_IRS_PEC02:Boeing777" -> "AirlinesComparison_IRS_PEC02:Qatar" [ label = "owl:sameAs" ];
+	"AirlinesComparison_IRS_PEC02:MajorAirline" -> "https://dbpedia.org/page/Qatar_Airways" [ label = "rdfs:sameAs" ];
+	"NULL" -> "-20ca07d1:18f2b43abd1:-7fee" [ label = "rdf:first" ];
+	"NULL" -> "-20ca07d1:18f2b43abd1:-7fea" [ label = "swrl:body" ];
+	"NULL" -> "AirlinesComparison_IRS_PEC02:AircraftCapacity" [ label = "owl:onProperty" ];
+	"NULL" -> "urn:swrl:var#'Ryanair'" [ label = "swrl:argument1" ];
+	"NULL" -> "AirlinesComparison_IRS_PEC02:AirportFlights" [ label = "owl:onProperty" ];
+	"NULL" -> "AirlinesComparison_IRS_PEC02:Capacity" [ label = "owl:onProperty" ];
+	"NULL" -> "-20ca07d1:18f2b43abd1:-7fec" [ label = "rdf:first" ];
+	"NULL" -> "-20ca07d1:18f2b43abd1:-7fe8" [ label = "swrl:head" ];
+	"NULL" -> "AirlinesComparison_IRS_PEC02:AirportCapability" [ label = "owl:onProperty" ];
+	"NULL" -> "AirlinesComparison_IRS_PEC02:LowCostAirline" [ label = "swrl:classPredicate" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "xsd:string" [ label = "owl:onDataRange" ];
+	"NULL" -> "-20ca07d1:18f2b43abd1:-7fed" [ label = "swrl:head" ];
+	"NULL" -> "-20ca07d1:18f2b43abd1:-7fe9" [ label = "rdf:first" ];
+	"NULL" -> "urn:swrl:var#'Qatar'" [ label = "swrl:argument1" ];
+	"NULL" -> "-20ca07d1:18f2b43abd1:-7fef" [ label = "swrl:body" ];
+	"NULL" -> "AirlinesComparison_IRS_PEC02:Aircraft" [ label = "owl:onClass" ];
+	"NULL" -> "AirlinesComparison_IRS_PEC02:Airport" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "AirlinesComparison_IRS_PEC02:Airline" [ label = "swrl:classPredicate" ];
+	"NULL" -> "AirlinesComparison_IRS_PEC02:MajorAirline" [ label = "swrl:classPredicate" ];
+	"NULL" -> "AirlinesComparison_IRS_PEC02:Aircraft" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "-20ca07d1:18f2b43abd1:-7fe7" [ label = "rdf:first" ];
+	"AirlinesComparison_IRS_PEC02:LowCostAirline" -> "https://dbpedia.org/page/Ryanair" [ label = "rdfs:sameAs" ];
+	"AirlinesComparison_IRS_PEC02:Airline" -> "AirlinesComparison_IRS_PEC02:Airline" [ label = "AirlinesComparison_IRS_PEC02:AirportCapability" ];
+	"AirlinesComparison_IRS_PEC02:Airport" -> "xsd:string" [ label = "AirlinesComparison_IRS_PEC02:IATA" ];
+	"AirlinesComparison_IRS_PEC02:Aircraft" -> "owl:Thing" [ label = "AirlinesComparison_IRS_PEC02:AircraftCapacity" ];
+	"AirlinesComparison_IRS_PEC02:Airport" -> "AirlinesComparison_IRS_PEC02:Airport" [ label = "AirlinesComparison_IRS_PEC02:AirportFlights" ];
+	"AirlinesComparison_IRS_PEC02:TypeFlight" -> "xsd:string" [ label = "AirlinesComparison_IRS_PEC02:Duration" ];
+	"AirlinesComparison_IRS_PEC02:Aircraft" -> "xsd:string" [ label = "AirlinesComparison_IRS_PEC02:Capacity" ];
+
+}
